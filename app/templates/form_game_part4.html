@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Anxlyzer - Form Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-[#B2D6C8] min-h-screen relative font-sans">
+        <!-- Sidebar -->
+        <div class="absolute top-0 left-0 w-[280px] h-full bg-[#F7F7F7] px-6 py-6 shadow-lg rounded-tr-3xl rounded-br-3xl overflow-hidden">
+            <h1 class="text-3xl font-extrabold text-[#188064] mb-2 tracking-wide">Anxlyzer</h1>
+            <p class="text-sm text-[#4C726D] mb-12">Prediksi Tingkat Kecemasanmu</p>
+            <div class="space-y-7">
+                <!-- Step 1 -->
+                <div class="flex items-center space-x-4 py-2 px-4 hover:bg-white rounded-xl transition cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+                <span class="font-semibold">Data Diri</span>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative w-[256px] h-[48px] flex items-center space-x-4 bg-[#3D8D7A]/15 rounded-l-xl py-2 px-4 shadow-md transition text-[#1A4740]">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 0 1-.657.643 48.39 48.39 0 0 1-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 0 1-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 0 0-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 0 1-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 0 0 .657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 0 1-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 0 0 5.427-.63 48.05 48.05 0 0 0 .582-4.717.532.532 0 0 0-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 0 0 .658-.663 48.422 48.422 0 0 0-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 0 1-.61-.58v0Z" />
+                    </svg>
+                    <span class="text-[#1A4740] font-medium">Perilaku Bermain</span>
+                    <span class="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-11 bg-[#3D8D7A] rounded-l-full"></span>
+                </div>
+                <!-- Step 3 -->
+                <div class="flex items-center space-x-4 py-2 px-4 hover:bg-white rounded-xl transition cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+                    </svg>
+                    <span class="text-[#1A4740] font-medium">Kuesioner SWLS</span>
+                </div>
+                <!-- Step 4 -->
+                <div class="flex items-center space-x-4 py-2 px-4 hover:bg-white rounded-xl transition cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+                    </svg>
+                    <span class="text-[#1A4740] font-medium">Kuesioner SPIN</span>
+                </div>
+                <!-- Step 5 -->
+                <div class="flex items-center space-x-4 py-2 px-4 hover:bg-white rounded-xl transition cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+                    </svg>
+                    <span class="font-medium">Hasil Prediksi</span>
+                </div>
+                <!-- Ilustrasi di bagian bawah sidebar -->
+                <div class="mt-auto w-[280px] h-[160px] flex justify-center -mx-6">
+                    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150 object-cover"><style>
+                    .path-0{
+                        animation:pathAnim-0 4s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                    }
+                    @keyframes pathAnim-0{
+                        0%{
+                        d: path("M 0,700 L 0,175 C 50.226039161800074,183.3290965304019 100.45207832360015,191.65819306080382 176,215 C 251.54792167639985,238.34180693919618 352.41772586739944,276.69632428718654 424,292 C 495.58227413260056,307.30367571281346 537.8770182068018,299.5565097904501 609,299 C 680.1229817931982,298.4434902095499 780.0742013053932,305.07763655101337 850,321 C 919.9257986946068,336.92236344898663 959.826176571625,362.1329440054965 1012,395 C 1064.173823428375,427.8670559945035 1128.6210924081072,468.3905874270009 1202,508 C 1275.3789075918928,547.6094125729991 1357.6894537959465,586.3047062864996 1440,625 L 1440,700 L 0,700 Z");
+                        }
+                        25%{
+                        d: path("M 0,700 L 0,175 C 65.25867399519066,194.53074544829954 130.51734799038132,214.06149089659908 201,208 C 271.4826520096187,201.93850910340092 347.1892820336654,170.28478186190313 420,172 C 492.8107179663346,173.71521813809687 562.725523874957,208.7993816557884 630,252 C 697.274476125043,295.2006183442116 761.9086224665062,346.5176915149433 840,402 C 918.0913775334938,457.4823084850567 1009.6399862590176,517.1298522844384 1066,525 C 1122.3600137409824,532.8701477155616 1143.5314324974236,488.96289934730333 1200,497 C 1256.4685675025764,505.03710065269667 1348.2342837512883,565.0185503263483 1440,625 L 1440,700 L 0,700 Z");
+                        }
+                        50%{
+                        d: path("M 0,700 L 0,175 C 67.88869804191,185.7901064926142 135.77739608382,196.58021298522843 200,205 C 264.22260391618,213.41978701477157 324.77911370663,219.4692545517005 393,224 C 461.22088629337,228.5307454482995 537.1061490896599,231.54276880796976 605,253 C 672.8938509103401,274.45723119203024 732.7962899347303,314.35967021642045 796,368 C 859.2037100652697,421.64032978357955 925.7086911714189,489.0185503263483 1003,502 C 1080.2913088285811,514.9814496736517 1168.3689453795944,473.5661284781862 1243,485 C 1317.6310546204056,496.4338715218138 1378.815527310203,560.7169357609068 1440,625 L 1440,700 L 0,700 Z");
+                        }
+                        75%{
+                        d: path("M 0,700 L 0,175 C 56.896599106836135,177.3105462040536 113.79319821367227,179.62109240810716 187,214 C 260.20680178632773,248.37890759189284 349.7238062521471,314.82617657162496 429,326 C 508.2761937478529,337.17382342837504 577.3115767777397,293.0742013053933 645,289 C 712.6884232222603,284.9257986946067 779.0298866368945,320.87701820680184 849,371 C 918.9701133631055,421.12298179319816 992.5688766746821,485.41772586739944 1058,515 C 1123.431123325318,544.5822741326006 1180.6946066643766,539.4520783236002 1243,552 C 1305.3053933356234,564.5479216763998 1372.6526966678116,594.7739608381999 1440,625 L 1440,700 L 0,700 Z");
+                        }
+                        100%{
+                        d: path("M 0,700 L 0,175 C 50.226039161800074,183.3290965304019 100.45207832360015,191.65819306080382 176,215 C 251.54792167639985,238.34180693919618 352.41772586739944,276.69632428718654 424,292 C 495.58227413260056,307.30367571281346 537.8770182068018,299.5565097904501 609,299 C 680.1229817931982,298.4434902095499 780.0742013053932,305.07763655101337 850,321 C 919.9257986946068,336.92236344898663 959.826176571625,362.1329440054965 1012,395 C 1064.173823428375,427.8670559945035 1128.6210924081072,468.3905874270009 1202,508 C 1275.3789075918928,547.6094125729991 1357.6894537959465,586.3047062864996 1440,625 L 1440,700 L 0,700 Z");
+                        }
+                    }</style><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#7bdcb5"></stop><stop offset="95%" stop-color="#00d084"></stop></linearGradient></defs><path d="M 0,700 L 0,175 C 50.226039161800074,183.3290965304019 100.45207832360015,191.65819306080382 176,215 C 251.54792167639985,238.34180693919618 352.41772586739944,276.69632428718654 424,292 C 495.58227413260056,307.30367571281346 537.8770182068018,299.5565097904501 609,299 C 680.1229817931982,298.4434902095499 780.0742013053932,305.07763655101337 850,321 C 919.9257986946068,336.92236344898663 959.826176571625,362.1329440054965 1012,395 C 1064.173823428375,427.8670559945035 1128.6210924081072,468.3905874270009 1202,508 C 1275.3789075918928,547.6094125729991 1357.6894537959465,586.3047062864996 1440,625 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><style>
+                    .path-1{
+                        animation:pathAnim-1 4s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                    }
+                    @keyframes pathAnim-1{
+                        0%{
+                        d: path("M 0,700 L 0,408 C 69.41257299896941,402.6994160082446 138.82514599793882,397.39883201648917 215,403 C 291.1748540020612,408.60116798351083 374.11198900721405,425.10408794228783 441,469 C 507.88801099278595,512.8959120577122 558.726897973205,584.1848162143594 620,599 C 681.273102026795,613.8151837856406 752.9804190999657,572.1566472002748 815,574 C 877.0195809000343,575.8433527997252 929.3514256269323,621.1885949845413 1009,645 C 1088.6485743730677,668.8114050154587 1195.6138783923052,671.0889728615597 1272,703 C 1348.3861216076948,734.9110271384403 1394.1930608038474,796.4555135692201 1440,858 L 1440,700 L 0,700 Z");
+                        }
+                        25%{
+                        d: path("M 0,700 L 0,408 C 82.69529371350049,383.24493301271036 165.39058742700098,358.4898660254208 222,382 C 278.609412572999,405.5101339745792 309.1329440054965,477.2854689110271 373,537 C 436.8670559945035,596.7145310889729 534.0776365510134,644.3682583304706 618,644 C 701.9223634489866,643.6317416695294 772.5565097904501,595.2414977670903 831,599 C 889.4434902095499,602.7585022329097 935.6963242871864,658.6657506011679 999,680 C 1062.3036757128136,701.3342493988321 1142.658193060804,688.0954998282378 1219,712 C 1295.341806939196,735.9045001717622 1367.670903469598,796.9522500858811 1440,858 L 1440,700 L 0,700 Z");
+                        }
+                        50%{
+                        d: path("M 0,700 L 0,408 C 82.78048780487805,364.2081758845757 165.5609756097561,320.41635176915145 242,328 C 318.4390243902439,335.58364823084855 388.5365853658536,394.54276880796976 446,440 C 503.4634146341464,485.45723119203024 548.2926829268293,517.4125729989694 617,539 C 685.7073170731707,560.5874270010306 778.2926829268291,571.8069391961525 849,591 C 919.7073170731709,610.1930608038475 968.5365853658539,637.3596702164205 1036,658 C 1103.4634146341461,678.6403297835795 1189.560975609756,692.7543799381657 1260,725 C 1330.439024390244,757.2456200618343 1385.219512195122,807.6228100309172 1440,858 L 1440,700 L 0,700 Z");
+                        }
+                        75%{
+                        d: path("M 0,700 L 0,408 C 81.60906904843696,399.1082102370319 163.21813809687393,390.21642047406385 230,399 C 296.78186190312607,407.78357952593615 348.73651666094133,434.2425283407764 410,452 C 471.26348333905867,469.7574716592236 541.8357952593611,478.81346616283054 609,500 C 676.1642047406389,521.1865338371695 739.9203023016146,554.5036070079011 819,571 C 898.0796976983854,587.4963929920989 992.4829955341806,587.1721058055651 1054,641 C 1115.5170044658194,694.8278941944349 1144.1477155616626,802.8079697698385 1203,848 C 1261.8522844383374,893.1920302301615 1350.9261422191687,875.5960151150807 1440,858 L 1440,700 L 0,700 Z");
+                        }
+                        100%{
+                        d: path("M 0,700 L 0,408 C 69.41257299896941,402.6994160082446 138.82514599793882,397.39883201648917 215,403 C 291.1748540020612,408.60116798351083 374.11198900721405,425.10408794228783 441,469 C 507.88801099278595,512.8959120577122 558.726897973205,584.1848162143594 620,599 C 681.273102026795,613.8151837856406 752.9804190999657,572.1566472002748 815,574 C 877.0195809000343,575.8433527997252 929.3514256269323,621.1885949845413 1009,645 C 1088.6485743730677,668.8114050154587 1195.6138783923052,671.0889728615597 1272,703 C 1348.3861216076948,734.9110271384403 1394.1930608038474,796.4555135692201 1440,858 L 1440,700 L 0,700 Z");
+                        }
+                    }</style><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#7bdcb5"></stop><stop offset="95%" stop-color="#00d084"></stop></linearGradient></defs><path d="M 0,700 L 0,408 C 69.41257299896941,402.6994160082446 138.82514599793882,397.39883201648917 215,403 C 291.1748540020612,408.60116798351083 374.11198900721405,425.10408794228783 441,469 C 507.88801099278595,512.8959120577122 558.726897973205,584.1848162143594 620,599 C 681.273102026795,613.8151837856406 752.9804190999657,572.1566472002748 815,574 C 877.0195809000343,575.8433527997252 929.3514256269323,621.1885949845413 1009,645 C 1088.6485743730677,668.8114050154587 1195.6138783923052,671.0889728615597 1272,703 C 1348.3861216076948,734.9110271384403 1394.1930608038474,796.4555135692201 1440,858 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1"></path></svg>
+                </div>
+            </div>
+        </div>
+        <!-- Main -->
+        <div class="relative ml-[300px] flex justify-center items-center min-h-screen px-4 py-4">
+            <div class="bg-[#F7F7F7] w-full h-[395px] rounded-3xl shadow-2xl p-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Data Perilaku Bermain</h2>
+                <!-- Judul dan Progress -->
+                <div class="mb-4">
+                    <p class="text-sm text-gray-700 mb-1">Bagian {{ current_part }} dari 4</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-[#3D8D7A] h-2.5 rounded-full transition-all duration-300" style="width: {{ (4 / 4) * 100 }}%"></div>
+                    </div>
+                </div>
+                <form method="POST" class="space-y-6 text-gray-700">
+                    <!-- FORM BAGIAN ANTUSIAS -->
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium mb-4">Seberapa Antusias Kamu Terhadap Game yang Dimainkan?</label>
+                        <p class="text-xs text-gray-500 mb-4">Pilih seberapa besar rasa ketertarikan atau kepuasan kamu saat bermain game tersebut</p>
+                        <select name="Narcissism" required class="w-full bg-[#F7F7F7] border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#3D8D7A]">
+                            <option value="" disabled selected>Pilih salah satu</option>
+                            <option value="1">1 - Tidak Antusias</option>
+                            <option value="2">2 - Kurang Antusias</option>
+                            <option value="3">3 - Cukup Antusias</option>
+                            <option value="4">4 - Antusias</option>
+                            <option value="5">5 - Sangat Antusias</option>
+                        </select>
+                        <!-- Tombol buka modal -->
+                        <button type="button" class="flex items-center text-sm text-[#3D8D7A] font-medium hover:underline focus:outline-none mt-6" onclick="showModal('modal-antusias', 'modal-content-antusias')">📌 Tolak ukur yang bisa digunakan
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="relative flex flex-col justify-center overflow-hidden">
+                        <img src="/img/beams.jpg" alt="" class="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="1308" />
+                        <div class="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,#188064)]"></div>
+                        <div class="flex z-10 mx-1 max-w-screen-xl">
+                            <button onclick="window.location.href = '/form/game/part3'" type="submit" class=" relative border-2 border-[#188064] bg-transparent py-2.5 px-5 font-medium uppercase text-[#188064] transition-colors before:absolute before:right-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-right before:scale-x-0 before:bg-[#188064] before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100">Bagian 3</button>
+                            <button type="submit" class="relative border-2 border-[#188064] bg-transparent ml-[569px] py-2.5 px-5 font-medium uppercase text-[#188064] transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-[#188064] before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100">Kuesioner SWLS</button>
+                        </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- Modal Tolak Ukur Antusias -->
+            <div id="modal-antusias" class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-sm transition-opacity duration-300">
+            <div class="flex items-center justify-center min-h-screen px-4 py-6" onclick="hideModal('modal-antusias', 'modal-content-antusias')">
+                <div id="modal-content-antusias" class="relative bg-white w-full max-w-3xl rounded-2xl shadow-2xl transform scale-95 opacity-0 transition-all duration-300 p-6 overflow-hidden" onclick="event.stopPropagation()">
+                <!-- Tombol Close -->
+                <button onclick="hideModal('modal-antusias', 'modal-content-antusias')" class="absolute top-3 right-3 text-gray-400 hover:text-emerald-600 text-2xl font-bold transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                </button>
+
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">📌 Tolak Ukur Antusias Bermain Game</h3>
+
+                <div class="overflow-x-auto max-h-[420px] rounded-lg border border-gray-200">
+                    <table class="min-w-full text-sm text-left text-gray-700 border-collapse">
+                    <thead class="bg-[#E6F2F0] text-[#188064] text-sm font-semibold border-b">
+                        <tr>
+                        <th class="py-3 px-4">Nilai</th>
+                        <th class="py-3 px-4">Deskripsi Singkat</th>
+                        <th class="py-3 px-4">Karakteristik Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr class="hover:bg-gray-50">
+                        <td class="py-3 px-4 font-medium text-gray-800">1 - Tidak Antusias</td>
+                        <td class="py-3 px-4">Tidak tertarik dengan game</td>
+                        <td class="py-3 px-4">Tidak bermain game sama sekali atau hanya ikut-ikutan teman tanpa minat pribadi.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                        <td class="py-3 px-4 font-medium text-gray-800">2 - Kurang Antusias</td>
+                        <td class="py-3 px-4">Bermain sesekali</td>
+                        <td class="py-3 px-4">Bermain 1x seminggu atau kurang, tidak mengikuti tren, dan tidak tertarik mendalami permainan.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                        <td class="py-3 px-4 font-medium text-gray-800">3 - Cukup Antusias</td>
+                        <td class="py-3 px-4">Rutin tapi bukan prioritas</td>
+                        <td class="py-3 px-4">Bermain 2–4 kali per minggu, hanya sebagai hiburan, tidak aktif di komunitas.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                        <td class="py-3 px-4 font-medium text-gray-800">4 - Antusias</td>
+                        <td class="py-3 px-4">Sering main & mengikuti tren</td>
+                        <td class="py-3 px-4">Bermain hampir setiap hari, mengikuti perkembangan game, dan kadang terlibat komunitas.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                        <td class="py-3 px-4 font-medium text-gray-800">5 - Sangat Antusias</td>
+                        <td class="py-3 px-4">Game adalah bagian hidup</td>
+                        <td class="py-3 px-4">Game menjadi bagian dari identitas diri, aktif di komunitas, serta sangat mengikuti perkembangan industri game.</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <script>
+            function showModal(id, contentId) {
+            const modal = document.getElementById(id);
+            const content = document.getElementById(contentId);
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                content.classList.remove('scale-95', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            }, 50);
+            }
+
+            function hideModal(id, contentId) {
+            const modal = document.getElementById(id);
+            const content = document.getElementById(contentId);
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+            }
+
+            function closeModal(event) {
+                if (event.target.id === "modal-antusias") {
+                hideModal("modal-antusias", "modal-content-antusias");
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Anxlyzer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-[#F7F7F7] text-gray-800">
+        
+        <!-- Navbar -->
+        <div class="w-full px-8 py-4 flex items-center justify-between bg-[#F7F7F7] shadow-sm">
+            <!-- Kiri: Menu kiri -->
+            <div class="flex gap-6 text-sm text-gray-600 ml-8">
+                <a href="#" class="text-[#F7F7F7] hover:text-black">Home</a>
+                <a href="#" class="text-[#F7F7F7] hover:text-black">Contact</a>
+            </div>
+            <!-- Tengah: Judul -->
+            <div class="text-xl font-bold text-[#188064] absolute left-1/2 transform -translate-x-1/2">
+                Anxlyzer
+            </div>
+            <!-- Kanan: Menu kanan -->
+            <div class="flex gap-6 text-sm text-gray-600 mr-8">
+                <a href="#" class="text-[#F7F7F7] hover:text-black">Blog</a>
+                <a href="#" class="text-[#F7F7F7] hover:text-black">Client Area</a>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="max-w-6xl mx-auto px-6 pt-10 flex flex-col md:flex-row items-center mt-5">
+            <div class="flex-1 mb-10 md:mb-0 mt-6">
+                <h1 class="text-4xl font-bold text-gray-900 leading-tight mb-4">
+                    Dari kebiasaan <span class="text-[#188064]">main game</span>, <span class="text-[#188064]">Anxlyzer</span> bantu kenalin <br/> tingkat <span class="text-[#188064]">cemasmu</span>
+                </h1>
+                <p class="text-gray-700 mb-6">
+                    Isi data diri, perilaku main game, dan kuesioner psikologi, <br/> Anxlyzer bisa bantu prediksi tingkat kecemasanmu. <br /> Nggak ribet, cepat, dan gratis.
+                </p>
+                <div class="relative flex flex-col justify-center overflow-hidden mt-4 py-4">
+                    <img src="/img/beams.jpg" alt="" class="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="1308"/>
+                    <div class="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,#188064)]"></div>
+                    <div class="z-10 mx-1 max-w-screen-xl">
+                        <div class="flex flex-wrap gap-5">
+                            <button onclick="window.location.href = '/form/personal'" class="relative -left-1 -top-1 bg-[#188064] px-5 py-2.5 font-medium uppercase text-white transition-all before:absolute before:left-1 before:top-1 before:-z-[1] before:h-full before:w-full before:border-2 before:border-[#188064] before:transition-all before:content-[''] hover:left-0 hover:top-0 before:hover:left-0 before:hover:top-0">
+                                Mulai Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 flex justify-center">
+                <img src="{{ url_for('static', filename='assets/hero.png') }}" alt="Illustration" class="w-full h-auto"/>
+            </div>
+        </div>
+
+        <!-- Section Penjelasan -->
+        <div>
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+                <path d="M 0,400 L 0,150 C 64.28237718996908,186.80178632772243 128.56475437993817,223.60357265544485 206,215 C 283.43524562006183,206.39642734455515 374.02335967021645,152.38749570594297 440,122 C 505.97664032978355,91.61250429405702 547.3418069391962,84.84644452078324 605,79 C 662.6581930608038,73.15355547921676 736.609412572999,68.22672621092408 818,93 C 899.390587427001,117.77327378907592 988.220542768808,172.24665063552044 1065,180 C 1141.779457231192,187.75334936447956 1206.5084163517693,148.78667124699416 1267,136 C 1327.4915836482307,123.21332875300584 1383.7457918241153,136.60666437650292 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#7bdcb5" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+            </svg>
+            <div class="w-full bg-[#7bdcb5] -my-[150px]">
+                <div class="max-w-6xl mx-auto px-6">
+                    <!-- Tentang Model Prediksi -->
+                    <section class="py-16">
+                        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-14">
+                            <!-- Ilustrasi -->
+                            <div class="flex-1">
+                                <img src="{{ url_for('static', filename='assets/tentang.png') }}" alt="Model Prediksi" class="w-full max-w-[400px] mx-auto"/>
+                            </div>
+                            <!-- Penjelasan -->
+                            <div class="flex-1 bg-white p-8 rounded-2xl shadow-md">
+                                <h2 class="text-3xl font-bold text-[#188064] mb-4">
+                                    Tentang Model Prediksi
+                                </h2>
+                                <p class="text-gray-700 mb-4">
+                                    Model ini memprediksi tingkat kecemasan berdasarkan kebiasaan bermain game dan jawaban dari dua kuesioner psikologis: <strong>SWLS</strong> dan <strong>SPIN</strong>.
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    Skor GAD-7 digunakan sebagai dasar prediksi, yang merupakan alat standar untuk mengukur kecemasan umum.
+                                </p>
+                                <div class="bg-gray-100 p-4 rounded-md mb-4">
+                                    <p class="font-medium text-gray-800 mb-2">
+                                        Interpretasi Skor GAD-7 (maksimal: 21):
+                                    </p>
+                                    <ul class="space-y-1 text-gray-700 list-disc list-inside">
+                                        <li><strong>0 – 4</strong> → <span class="text-green-600 font-semibold">Kecemasan Rendah</span></li>
+                                        <li><strong>5 – 9</strong> → <span class="text-yellow-600 font-semibold">Kecemasan Ringan</span></li>
+                                        <li><strong>10 – 14</strong> → <span class="text-orange-600 font-semibold">Kecemasan Sedang</span></li>
+                                        <li><strong>15 – 21</strong> → <span class="text-red-600 font-semibold">Kecemasan Tinggi</span></li>
+                                    </ul>
+                                </div>
+                                <p class="text-gray-700">
+                                    Setelah kamu mengisi semua data dan kuesioner, model akan memberikan prediksi dan rekomendasi berdasarkan skor yang dihasilkan.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Section: Rentang Usia Pengguna -->
+                <section class="w-full bg-[#F7F7F7] py-20 px-7">
+                    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                        <!-- Teks Penjelasan -->
+                        <div class="w-full md:w-1/2 space-y-5">
+                            <h2 class="text-4xl font-bold text-[#188064] mb-8">
+                                Siapa yang Cocok Menggunakan <span class="text-[#188064]">Anxlyzer</span>?
+                            </h2>
+                            <p class="text-gray-700 mb-4">
+                                Anxlyzer dirancang untuk <strong>usia 12 hingga 25 tahun</strong> — mulai dari pelajar hingga mahasiswa dan pekerja muda yang aktif bermain game online.
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                Menurut beberapa penelitian, rentang usia ini berada dalam fase perkembangan emosional yang rentan terhadap kecemasan, terutama akibat kebiasaan bermain game berlebihan. Anxlyzer membantu kamu memahami potensi penyebab rasa cemasmu secara personal melalui pendekatan interaktif dan berbasis data.
+                            </p>
+                        </div>
+                        <!-- Ilustrasi -->
+                        <div class="w-full md:w-1/2 flex justify-center">
+                            <img src="{{ url_for('static', filename='assets/usia.png') }}" alt="Ilustrasi Usia Pengguna" class="w-full max-w-md rounded-xl hover:scale-105 transition-transform duration-300 ease-in-out">
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: CTA Ajak Mulai -->
+                <section class="bg-[#7bdcb5] py-16 text-center text-white">
+                    <div class="max-w-4xl mx-auto px-6">
+                        <h2 class="text-2xl md:text-3xl font-bold mb-6">Siap Mulai Kenali Tingkat Kecemasanmu?</h2>
+                        <a href="/form/personal" class="inline-block bg-[#F7F7F7] text-[#188064] font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">
+                        Klik untuk Mulai!
+                        </a>
+                    </div>
+                </section>
+                <!-- Footer -->
+                <footer class="bg-[#F7F7F7] text-center text-sm text-gray-600 py-4">
+                    © 2025 Anxlyzer. All rights reserved.
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
