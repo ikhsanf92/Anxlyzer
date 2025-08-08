@@ -10,25 +10,33 @@ import os
 import requests
 
 def download_file_if_missing(url, local_path):
+    """Download file dari URL jika belum ada di local_path."""
     if not os.path.exists(local_path):
         print(f"File {local_path} tidak ditemukan. Mengunduh dari {url}...")
-        response = requests.get(url, stream=True)
         os.makedirs(os.path.dirname(local_path), exist_ok=True)
+        response = requests.get(url, stream=True)
         with open(local_path, 'wb') as f:
             for chunk in response.iter_content(chunk_size=8192):
                 if chunk:
                     f.write(chunk)
         print(f"File {local_path} berhasil diunduh.")
+    else:
+        print(f"File {local_path} sudah ada, skip download.")
 
-# Ganti URL berikut dengan direct download link modelmu
-MODEL_URL = "https://drive.google.com/uc?export=download&id=1XgdO-VzZZZ1z7jk6MdzlBRfjYuI3z_BD"
+# Daftar file yang perlu diunduh (URL Google Drive direct)
+FILES_TO_DOWNLOAD = {
+    "app/models/model_rf_sm.pkl": "https://drive.google.com/uc?export=download&id=1XgdO-VzZZZ1z7jk6MdzlBRfjYuI3z_BD",
+}
 
-download_file_if_missing(MODEL_URL, 'app/models/model_rf_sm.pkl')
+# Download jika file belum ada
+for path, url in FILES_TO_DOWNLOAD.items():
+    download_file_if_missing(url, path)
 
-model = joblib.load('app/models/model_rf_sm.pkl')
-scaler = joblib.load('app/models/scaler.pkl')
-label_encoders = joblib.load('app/models/label_encoders.pkl')
-le_y = joblib.load('app/models/label_encoder_y.pkl')
+# Load model setelah semua file aman
+model = joblib.load("app/models/model_rf_sm.pkl")
+scaler = joblib.load("app/models/scaler.pkl")
+label_encoders = joblib.load("app/models/label_encoders.pkl")
+le_y = joblib.load("app/models/label_encoder_y.pkl")
 
 with open('app/models/feature_columns.txt') as f:
     feature_columns = [line.strip() for line in f]

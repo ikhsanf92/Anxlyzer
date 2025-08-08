@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Cython debug symbols
+cython_debug/
+
+# Flask instance folder
+instance/
+.env
+.env.*
+
+# Environment variables
+*.env
+*.secret
+*.key
+
+# Virtual environment
+venv/
+notebooks/
+.venv/
+.notebooks/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VSCode settings
+.vscode/
+
+# macOS files
+.DS_Store
+
+# logs
+*.log
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
