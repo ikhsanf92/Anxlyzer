@@ -1,1 +1,2 @@
 app/models/model_rf_sm.pkl filter=lfs diff=lfs merge=lfs -text
+model_rf_sm.pkl filter=lfs diff=lfs merge=lfs -text
